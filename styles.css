@@ -1,0 +1,381 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    width: 100%;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(4, 4, 48);
+    height: 100vh;
+    width: 100%;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.navbar{
+    background-color:rgb(4, 4, 48);
+    height: 8vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+}
+
+.tombol{
+    color: white;
+    cursor: pointer;
+    display: none;
+}
+
+.tulisan{
+    display: flex;
+    gap: 15px;
+    margin: 10px;
+}
+
+.tulisan a{
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+    font-family: 'Barlow Condensed';
+
+}
+
+.sosmed{
+    display: flex;
+    margin: 10px;
+}
+
+.main{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.main h1{
+    color: rgb(211, 244, 249);
+    font-family: 'Barlow Condensed';
+    font-weight: 200;
+    
+}
+
+.main h2{
+    color:  rgb(223, 228, 228);
+    font-family: 'Barlow Condensed';
+    font-weight: 100;
+}
+
+.typewriting{
+    font-size: 50px;
+    color: white;
+    font-family: 'Bree Serif'
+}
+
+.auto-type{
+    color: rgb(172, 231, 215);
+}
+
+.description{
+    height: 50vh;
+    width: 100%;
+    color: white;
+
+}
+
+
+.description-in-view{
+    animation: fadeInSlideOut 1.5s 
+}
+.aboutMe{
+    color: white;
+    /* margin: 20px; */
+    font-family: 'Barlow Condensed';
+    font-weight: 200;
+    font-size: 23px;
+    padding: 5px;
+}
+
+.aboutMe h1{
+    color:  rgb(172, 231, 215);
+}
+
+.aboutMe p{
+    font-size: 21px;
+}
+
+
+/* .description img{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    
+} */
+
+.description li{
+    list-style-type: none;
+}
+
+.experiences{
+    width: 100%;
+    color: white;
+}
+
+.experience{
+    color: white;
+    margin: 20px;
+    font-family: 'Barlow Condensed';
+    font-weight: 200;
+    font-size: 23px;
+}
+
+.experience h1{
+    color:  rgb(172, 231, 215);
+}
+.experience ul{
+    list-style-type: none;
+}
+
+.myProjects{
+    height: 70vh;
+    width: 100%;
+    color: white;
+    color: white;
+    font-family: 'Barlow Condensed';
+    font-weight: 200;
+    font-size: 23px;
+    margin-top: 100px;
+    /* padding: 10px; */
+}
+
+.projects ul{
+    list-style-type: none;
+}
+
+.myProjects h1{
+    color:  rgb(172, 231, 215);
+}
+
+.aboutMe h1{
+    width: 100%;
+}
+
+.accordion {
+  background-color:  rgb(16, 28, 58);
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+  border-radius: 5px;
+  margin-top: 30px;
+  font-family: 'Barlow Condensed';
+  font-size: 24px;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .accordion:hover {
+  background-color: rgb(2, 2, 7);
+}
+
+/* Style the accordion panel. Note: hidden by default */
+.panel {
+  padding: 0 18px;
+  background-color: rgb(4, 4, 48);
+  display: none;
+  overflow: hidden;
+  margin: 10px;
+  line-height: 40px;
+}
+
+.projectCard{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+.project{
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    width: 250px;
+    height: 250px;
+    background-color: rgba(39, 115, 166, 0.29);
+    padding: 10px;
+    margin: 5px;
+    border-radius: 10px;
+}
+
+.proContainer p{
+    color:  rgb(202, 235, 226);
+}
+.projects h1{
+    width: 100%;
+}
+
+
+.project h2{
+    padding: 8px;
+    border-radius: 10px;
+    color: rgb(172, 231, 215);
+    
+}
+@keyframes fadeInSlideOut {
+    from { opacity: 0; transform: translateY(20px);}
+    to { opacity: 1; transform: translateY(0)};
+}
+
+.footer{
+    height: 20vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+/* RESPONSIVE BREAKPOINT */
+
+/* TABLET */
+@media screen and (max-width: 768px){
+   *{
+    width: 100%;
+   
+   }
+    .navbar{
+        display: flex;
+        background-color: #090425;
+        /* width: 100%; */
+        /* position: fixed; */
+    }
+    .tulisan {
+		display: none;
+        width: 100%;
+      
+	}
+ 
+	.tulisan.aktif{
+		display: inline-block;
+		position: absolute;
+		top: 64px;
+		background: #090425;
+		right: 0;
+		left: 0;
+        padding-top: 0;
+        width: 100%;
+        overflow-x: hidden;
+	}
+ 
+	.tulisan.aktif a{
+		padding: 10px;
+		display: inline-block !important;
+        width: 100%
+	}
+ 
+	.tombol {
+		display: block;
+        padding: 10px;
+	}
+
+    /* OTHER ELEMENTS */
+
+    .panel {
+    padding: 0 18px;
+    background-color: rgb(4, 4, 48);
+    display: none;
+    overflow: hidden;
+    margin: 5px;
+    line-height: 40px;
+    }
+
+    .projectCard{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-top: 30px;
+    gap: 20px;
+    }
+
+    .project{
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    width: 80%;
+    height: 100px;
+    background-color: rgb(28, 28, 69);
+    padding: 10px;
+    margin: 5px;
+    border-radius: 10px;
+}
+    .project h2{
+    background-color: transparent;
+    padding: 8px;
+    box-shadow: none;
+    font-size: 24px;
+    color:rgb(209, 211, 255);
+}
+
+.myProjects {
+    width: 100%;
+}
+    .proContainer p{
+    font-size: 14px;
+    margin-left: 8px;
+    }
+
+    .main{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    overflow-x: hidden;
+    
+}
+
+.main h1{
+    color: rgb(211, 244, 249);
+    font-family: 'Barlow Condensed';
+    font-weight: 200;
+    font-size: 26px;
+}
+
+.main h2{
+    color:  rgb(223, 228, 228);
+    font-family: 'Barlow Condensed';
+    font-weight: 100;
+    font-size: 22px;
+}
+
+.typewriting{
+    font-size: 35px;
+    color: white;
+    font-family: 'Bree Serif'
+}
+
+.experiences{
+   
+    width: 80%;
+    /* opacity: 30%; */
+    color: white;
+}
+
+.experience{
+    color: white;
+    margin: 20px;
+    font-family: 'Barlow Condensed';
+    font-weight: 200;
+    font-size: 23px;
+}
+
+.experience ul{
+    list-style-type: none;
+}
+}
